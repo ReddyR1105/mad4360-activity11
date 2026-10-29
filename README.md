@@ -90,3 +90,5 @@ EVIDENCE_FONT=/absolute/path/to/flutter/bin/cache/artifacts/material_fonts/Robot
 ```
 
 Word report: `docs/Het_Jani_Activity11_Ghost_Hunt.docx`, with Ghost Hunt C (navigation) and D (constructor conflict), each supported by actual artifacts. Constructor examples use `.dart.txt` to avoid intentionally failing normal app analysis; copy to a temporary `.dart` file to reproduce the diagnostic. Reflections are guidance for student review, not invented personal experiences.
+
+Final APK verification: the integrated release APK built successfully (49.9 MB), installed on the Pixel_4a emulator, and displayed the completed foyer title. `evidence/screenshots/emulator-integrated-welcome.png` is a direct adb capture of this build. Full emulator signup/Back and rotation remain pending. The first build ran out of disk space; clearing only session-generated build output allowed the retry to pass. Build/install logs preserve both the failure and the successful retry.

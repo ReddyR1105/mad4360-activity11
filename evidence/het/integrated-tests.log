@@ -1,0 +1,14 @@
+00:00 +0: loading /Users/hetjani/Desktop/inclass11/haunted_registry/test/widget_test.dart
+00:00 +0: /Users/hetjani/Desktop/inclass11/haunted_registry/test/het_capture_test.dart: capture real widget-rendered navigation evidence
+00:00 +0 ~1: /Users/hetjani/Desktop/inclass11/haunted_registry/test/het_screens_test.dart: welcome stays usable at large text scale on a small display
+00:00 +1 ~1: /Users/hetjani/Desktop/inclass11/haunted_registry/test/het_screens_test.dart: welcome stays usable at large text scale on a small display
+00:01 +2 ~1: /Users/hetjani/Desktop/inclass11/haunted_registry/test/widget_test.dart: offline service is deterministic and recovers from simulated failure
+00:01 +3 ~1: /Users/hetjani/Desktop/inclass11/haunted_registry/test/widget_test.dart: offline service is deterministic and recovers from simulated failure
+00:02 +4 ~1: /Users/hetjani/Desktop/inclass11/haunted_registry/test/evidence_test.dart: capture real rendered app and exercise five picker boundaries
+00:03 +5 ~1: /Users/hetjani/Desktop/inclass11/haunted_registry/test/evidence_test.dart: capture real rendered app and exercise five picker boundaries
+00:03 +6 ~1: /Users/hetjani/Desktop/inclass11/haunted_registry/test/evidence_test.dart: capture real rendered app and exercise five picker boundaries
+00:03 +7 ~1: /Users/hetjani/Desktop/inclass11/haunted_registry/test/evidence_test.dart: capture real rendered app and exercise five picker boundaries
+00:04 +8 ~1: /Users/hetjani/Desktop/inclass11/haunted_registry/test/evidence_test.dart: capture real rendered app and exercise five picker boundaries
+00:04 +9 ~1: /Users/hetjani/Desktop/inclass11/haunted_registry/test/evidence_test.dart: capture real rendered app and exercise five picker boundaries
+00:04 +10 ~1: /Users/hetjani/Desktop/inclass11/haunted_registry/test/widget_test.dart: replacement navigation returns to foyer and disposes the form
+00:04 +11 ~1: All tests passed!

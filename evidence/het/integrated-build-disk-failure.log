@@ -1,0 +1,181 @@
+Running Gradle task 'assembleRelease'...                        
+Warning: Flutter support for your project's Gradle version (8.14.0) will soon be dropped. Please upgrade your Gradle version to a version of at least 9.1.0 soon.
+Alternatively, use the flag "--android-skip-build-dependency-validation" to bypass this check.
+
+Potential fix: Your project's gradle version is typically defined in the gradle wrapper file. By default, this can be found at /Users/hetjani/Desktop/inclass11/haunted_registry/android/gradle/wrapper/gradle-wrapper.properties. 
+For more information, see https://docs.gradle.org/current/userguide/gradle_wrapper.html.
+
+Warning: Flutter support for your project's Android Gradle Plugin version (Android Gradle Plugin version 8.11.1) will soon be dropped. Please upgrade your Android Gradle Plugin version to a version of at least Android Gradle Plugin version 9.0.1 soon.
+Alternatively, use the flag "--android-skip-build-dependency-validation" to bypass this check.
+
+Potential fix: Your project's AGP version is typically defined in the plugins block of the `settings.gradle` file (/Users/hetjani/Desktop/inclass11/haunted_registry/android/settings.gradle), by a plugin with the id of com.android.application. 
+If you don't see a plugins block, your project was likely created with an older template version. In this case it is most likely defined in the top-level build.gradle file (/Users/hetjani/Desktop/inclass11/haunted_registry/android/build.gradle) by the following line in the dependencies block of the buildscript: "classpath 'com.android.tools.build:gradle:<version>'".
+
+Warning: Flutter support for your project's Kotlin version (2.2.20) will soon be dropped. Please upgrade your Kotlin version to a version of at least 2.3.20 soon.
+Alternatively, use the flag "--android-skip-build-dependency-validation" to bypass this check.
+
+Potential fix: Your project's KGP version is typically defined in the plugins block of the `settings.gradle` file (/Users/hetjani/Desktop/inclass11/haunted_registry/android/settings.gradle), by a plugin with the id of org.jetbrains.kotlin.android. 
+If you don't see a plugins block, your project was likely created with an older template version, in which case it is most likely defined in the top-level build.gradle file (/Users/hetjani/Desktop/inclass11/haunted_registry/android/build.gradle) by the ext.kotlin_version property.
+
+Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 3232 bytes (99.8% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Failed to execute org.gradle.cache.internal.AsyncCacheAccessDecoratedCache$$Lambda/0x00000070015496a0@6b53d2f8.
+org.gradle.api.UncheckedIOException: Could not add entry ':app:mergeReleaseNativeLibs' to cache executionHistory.bin (/Users/hetjani/Desktop/inclass11/haunted_registry/android/.gradle/8.14/executionHistory/executionHistory.bin).
+	at org.gradle.cache.internal.btree.BTreePersistentIndexedCache.put(BTreePersistentIndexedCache.java:162)
+	at org.gradle.cache.internal.DefaultMultiProcessSafeIndexedCache.lambda$put$1(DefaultMultiProcessSafeIndexedCache.java:67)
+	at org.gradle.cache.internal.DefaultFileLockManager$DefaultFileLock.doWriteAction(DefaultFileLockManager.java:231)
+	at org.gradle.cache.internal.DefaultFileLockManager$DefaultFileLock.writeFile(DefaultFileLockManager.java:221)
+	at org.gradle.cache.internal.DefaultCacheCoordinator$UnitOfWorkFileAccess.writeFile(DefaultCacheCoordinator.java:475)
+	at org.gradle.cache.internal.DefaultMultiProcessSafeIndexedCache.put(DefaultMultiProcessSafeIndexedCache.java:67)
+	at org.gradle.cache.internal.AsyncCacheAccessDecoratedCache.lambda$putLater$1(AsyncCacheAccessDecoratedCache.java:56)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker$1.run(ExclusiveCacheAccessingWorker.java:174)
+	at org.gradle.cache.internal.DefaultCacheCoordinator.lambda$toSupplier$2(DefaultCacheCoordinator.java:228)
+	at org.gradle.cache.internal.DefaultCacheCoordinator.useCache(DefaultCacheCoordinator.java:249)
+	at org.gradle.cache.internal.DefaultCacheCoordinator.useCache(DefaultCacheCoordinator.java:223)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.flushOperations(ExclusiveCacheAccessingWorker.java:169)
+	at org.gradle.cache.internal.ExclusiveCacheAccessingWorker.run(ExclusiveCacheAccessingWorker.java:139)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.gradle.api.UncheckedIOException: java.io.IOException: No space left on device
+	at org.gradle.cache.internal.btree.FileBackedBlockStore.write(FileBackedBlockStore.java:140)
+	at org.gradle.cache.internal.btree.CachingBlockStore.flush(CachingBlockStore.java:64)
+	at org.gradle.cache.internal.btree.FreeListBlockStore.flush(FreeListBlockStore.java:103)
+	at org.gradle.cache.internal.btree.StateCheckBlockStore.flush(StateCheckBlockStore.java:85)
+	at org.gradle.cache.internal.btree.BTreePersistentIndexedCache.put(BTreePersistentIndexedCache.java:160)
+	... 18 more
+Caused by: java.io.IOException: No space left on device
+	at java.base/java.io.RandomAccessFile.writeBytes0(Native Method)
+	at java.base/java.io.RandomAccessFile.writeBytes(RandomAccessFile.java:572)
+	at java.base/java.io.RandomAccessFile.write(RandomAccessFile.java:602)
+	at org.gradle.internal.file.RandomAccessFileOutputStream.write(RandomAccessFileOutputStream.java:47)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:125)
+	at java.base/java.io.BufferedOutputStream.implFlush(BufferedOutputStream.java:252)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:246)
+	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:155)
+	at org.gradle.cache.internal.btree.ByteOutput.done(ByteOutput.java:62)
+	at org.gradle.cache.internal.btree.FileBackedBlockStore$BlockImpl.write(FileBackedBlockStore.java:223)
+	at org.gradle.cache.internal.btree.FileBackedBlockStore.write(FileBackedBlockStore.java:136)
+	... 22 more
+
+FAILURE: Build completed with 2 failures.
+
+1: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':app:mergeReleaseResources'.
+> Multiple task action failures occurred:
+   > A failure occurred while executing com.android.build.gradle.internal.res.Aapt2CompileRunnable
+      > Android resource compilation failed
+        ERROR: /Users/hetjani/.gradle/caches/8.14/transforms/ac02cb533ceda6021f4faaf5ae628a82/transformed/core-1.13.1/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png: AAPT: error: file failed to compile.
+
+   > A failure occurred while executing com.android.build.gradle.internal.res.Aapt2CompileRunnable
+      > Android resource compilation failed
+        ERROR: /Users/hetjani/.gradle/caches/8.14/transforms/ac02cb533ceda6021f4faaf5ae628a82/transformed/core-1.13.1/res/drawable-hdpi-v4/notification_bg_normal.9.png: AAPT: error: file failed to compile.
+
+   > A failure occurred while executing com.android.build.gradle.internal.res.Aapt2CompileRunnable
+      > Android resource compilation failed
+        ERROR: /Users/hetjani/.gradle/caches/8.14/transforms/ac02cb533ceda6021f4faaf5ae628a82/transformed/core-1.13.1/res/drawable-xxhdpi-v4/ic_call_decline.png: AAPT: error: file failed to compile.
+
+   > A failure occurred while executing com.android.build.gradle.internal.res.Aapt2CompileRunnable
+      > Android resource compilation failed
+        ERROR: /Users/hetjani/.gradle/caches/8.14/transforms/ac02cb533ceda6021f4faaf5ae628a82/transformed/core-1.13.1/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png: AAPT: error: file failed to compile.
+
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+2: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':app:mergeReleaseNativeLibs'.
+> A failure occurred while executing com.android.build.gradle.internal.tasks.MergeNativeLibsTask$MergeNativeLibsTaskWorkAction
+   > No space left on device
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+BUILD FAILED in 1m 29s
+
+FAILURE: Build completed with 3 failures.
+
+1: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':app:mergeReleaseResources'.
+> Multiple task action failures occurred:
+   > A failure occurred while executing com.android.build.gradle.internal.res.Aapt2CompileRunnable
+      > Android resource compilation failed
+        ERROR: /Users/hetjani/.gradle/caches/8.14/transforms/ac02cb533ceda6021f4faaf5ae628a82/transformed/core-1.13.1/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png: AAPT: error: file failed to compile.
+
+   > A failure occurred while executing com.android.build.gradle.internal.res.Aapt2CompileRunnable
+      > Android resource compilation failed
+        ERROR: /Users/hetjani/.gradle/caches/8.14/transforms/ac02cb533ceda6021f4faaf5ae628a82/transformed/core-1.13.1/res/drawable-hdpi-v4/notification_bg_normal.9.png: AAPT: error: file failed to compile.
+
+   > A failure occurred while executing com.android.build.gradle.internal.res.Aapt2CompileRunnable
+      > Android resource compilation failed
+        ERROR: /Users/hetjani/.gradle/caches/8.14/transforms/ac02cb533ceda6021f4faaf5ae628a82/transformed/core-1.13.1/res/drawable-xxhdpi-v4/ic_call_decline.png: AAPT: error: file failed to compile.
+
+   > A failure occurred while executing com.android.build.gradle.internal.res.Aapt2CompileRunnable
+      > Android resource compilation failed
+        ERROR: /Users/hetjani/.gradle/caches/8.14/transforms/ac02cb533ceda6021f4faaf5ae628a82/transformed/core-1.13.1/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png: AAPT: error: file failed to compile.
+
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+2: Task failed with an exception.
+-----------
+* What went wrong:
+Execution failed for task ':app:mergeReleaseNativeLibs'.
+> A failure occurred while executing com.android.build.gradle.internal.tasks.MergeNativeLibsTask$MergeNativeLibsTaskWorkAction
+   > No space left on device
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+3: Task failed with an exception.
+-----------
+* What went wrong:
+Could not add entry ':app:mergeReleaseResources' to cache executionHistory.bin (/Users/hetjani/Desktop/inclass11/haunted_registry/android/.gradle/8.14/executionHistory/executionHistory.bin).
+> java.io.IOException: No space left on device
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+BUILD FAILED in 1m 29s
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Could not receive a message from the daemon.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+Running Gradle task 'assembleRelease'...                           90.2s
+Gradle task assembleRelease failed with exit code 1

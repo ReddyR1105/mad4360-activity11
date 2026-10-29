@@ -1,0 +1,5 @@
+Analyzing conflict.dart...
+
+  error - conflict.dart:7:9 - The named parameter 'creatureType' is required, but there's no corresponding argument. Try adding the required argument. - missing_required_argument
+
+1 issue found.

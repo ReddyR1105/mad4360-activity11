@@ -1,0 +1,6 @@
+Performing Streamed Install
+Success
+Starting: Intent { cmp=com.mad4360.haunted_registry/.MainActivity }
+Error type 3
+Error: Activity class {com.mad4360.haunted_registry/com.mad4360.haunted_registry.MainActivity} does not exist.
+Starting: Intent { cmp=edu.mad4360.haunted_registry/.MainActivity }
