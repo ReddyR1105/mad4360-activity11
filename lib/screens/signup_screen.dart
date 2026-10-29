@@ -148,6 +148,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   const SizedBox(height: 16),
                   DropdownButtonFormField<String>(
                     key: const Key('creature'),
+                    isExpanded: true,
                     initialValue: _selectedCreatureType,
                     decoration: const InputDecoration(
                       labelText: 'Creature Type',

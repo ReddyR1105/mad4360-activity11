@@ -32,14 +32,15 @@ class WelcomeScreen extends StatelessWidget {
                   const SizedBox(height: 24),
                   const Text(
                     'THE MIDNIGHT MENAGERIE',
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       letterSpacing: 3,
                       color: Color(0xFFB5E48C),
                     ),
                   ),
                   const SizedBox(height: 20),
-                  SizedBox(
-                    height: 130,
+                  ConstrainedBox(
+                    constraints: const BoxConstraints(minHeight: 130),
                     child: AnimatedTextKit(
                       isRepeatingAnimation: false,
                       animatedTexts: [
@@ -73,6 +74,7 @@ class WelcomeScreen extends StatelessWidget {
                   const SizedBox(height: 20),
                   const Text(
                     'FOYER  /  LABORATORY  /  BALLROOM',
+                    textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 11, letterSpacing: 1),
                   ),
                 ],
