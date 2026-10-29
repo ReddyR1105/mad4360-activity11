@@ -1,0 +1,92 @@
+Running Gradle task 'assembleDebug'...                          
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/C:/Users/gosan/.gradle/wrapper/dists/gradle-9.3.1-all/9ot9r568e8zfvvd4mn8rbu1j0/gradle-9.3.1/lib/native-platform-0.22-milestone-29.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: Your Android app project: app located at: C:\Users\gosan\Documents\Codex\2026-10-29\the\outputs\activity11\android\app\build.gradle.kts
+applies the Kotlin Gradle Plugin, which will cause build failures in future versions of Flutter.
+Please migrate your app to Built-in Kotlin using this guide: https://docs.flutter.dev/release/breaking-changes/migrate-to-built-in-kotlin/for-app-developers
+
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+Running Gradle task 'assembleDebug'...                             34.4s
+√ Built build\app\outputs\flutter-apk\app-debug.apk
+Installing build\app\outputs\flutter-apk\app-debug.apk...        1,474ms
+I/Choreographer( 5389): Skipped 43 frames!  The application may be doing too much work on its main thread.
+D/WindowLayoutComponentImpl( 5389): Register WindowLayoutInfoListener on Context=edu.mad4360.haunted_registry.MainActivity@42f54b8, of which baseContext=android.app.ContextImpl@c7d86cd
+D/FlutterJNI( 5389): Sending viewport metrics to the engine.
+I/aunted_registry( 5389): Compiler allocated 5551KB to compile void android.view.ViewRootImpl.performTraversals(long)
+VMServiceFlutterDriver: Connecting to Flutter application at http://127.0.0.1:65058/h6DZfjov8Wg=/
+VMServiceFlutterDriver: Isolate found with number: 2434779753249167
+VMServiceFlutterDriver: Isolate 2434779753249167 is runnable.
+VMServiceFlutterDriver: Isolate is paused at start.
+VMServiceFlutterDriver: Attempting to resume isolate
+D/ProfileInstaller( 5389): Installing profile for edu.mad4360.haunted_registry
+I/flutter ( 5389): 00:00 +0: Android complete registry flow and real orientation change
+VMServiceFlutterDriver: Connected to Flutter application.
+D/InsetsController( 5389): hide(ime())
+I/ImeTracker( 5389): edu.mad4360.haunted_registry:d57782ac: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+I/Surface ( 5389): Creating surface for consumer unnamed-5389-2 with slotExpansion=1 for 64 slots
+I/Surface ( 5389): Creating surface for consumer ImageReader-1080x2340f1m3-5389-0 with slotExpansion=1 for 64 slots
+I/aunted_registry( 5389): Background concurrent mark compact GC freed 2069KB AllocSpace bytes, 11(1344KB) LOS objects, 49% free, 2852KB/5704KB, paused 1.286ms,5.572ms total 28.173ms
+D/WindowOnBackDispatcher( 5389): setTopOnBackInvokedCallback (unwrapped): io.flutter.embedding.android.FlutterActivity$1@91cdb2e
+D/WindowOnBackDispatcher( 5389): setOnBackInvokedCallbackInfo: io.flutter.embedding.android.FlutterActivity$1@91cdb2e
+VMServiceFlutterDriver: request_data message is taking a long time to complete...
+I/ImeTracker( 5389): edu.mad4360.haunted_registry:659e49fb: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+I/HWUI    ( 5389): Using FreeType backend (prop=Auto)
+D/InsetsController( 5389): show(ime())
+D/InsetsController( 5389): Setting requestedVisibleTypes to 511 (was 503)
+I/ImeTracker( 5389): edu.mad4360.haunted_registry:75036ca7: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+D/InsetsController( 5389): show(ime())
+I/ImeTracker( 5389): edu.mad4360.haunted_registry:75036ca7: onCancelled at PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+D/InputConnectionAdaptor( 5389): The input method toggled cursor monitoring on
+I/ImeTracker( 5389): edu.mad4360.haunted_registry:3fa6413e: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+D/InsetsController( 5389): show(ime())
+I/ImeTracker( 5389): edu.mad4360.haunted_registry:3fa6413e: onCancelled at PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+I/ImeTracker( 5389): edu.mad4360.haunted_registry:2fd26e85: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+D/InsetsController( 5389): show(ime())
+I/ImeTracker( 5389): edu.mad4360.haunted_registry:2fd26e85: onCancelled at PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+I/ImeTracker( 5389): edu.mad4360.haunted_registry:413ec35d: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+D/InsetsController( 5389): show(ime())
+I/ImeTracker( 5389): edu.mad4360.haunted_registry:413ec35d: onCancelled at PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+I/ImeTracker( 5389): edu.mad4360.haunted_registry:557efaf4: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false userId 0 displayId 0
+D/InsetsController( 5389): show(ime())
+I/ImeTracker( 5389): edu.mad4360.haunted_registry:557efaf4: onCancelled at PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+D/WindowOnBackDispatcher( 5389): setTopOnBackInvokedCallback (unwrapped): android.view.ImeBackAnimationController@3299f9a
+D/WindowOnBackDispatcher( 5389): setOnBackInvokedCallbackInfo: android.view.ImeBackAnimationController@3299f9a
+I/ImeTracker( 5389): edu.mad4360.haunted_registry:e2319aeb: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT fromUser false userId 0 displayId 0
+D/InsetsController( 5389): hide(ime())
+D/WindowOnBackDispatcher( 5389): setTopOnBackInvokedCallback (unwrapped): io.flutter.embedding.android.FlutterActivity$1@91cdb2e
+D/InsetsController( 5389): Setting requestedVisibleTypes to 503 (was 511)
+D/WindowOnBackDispatcher( 5389): setOnBackInvokedCallbackInfo: io.flutter.embedding.android.FlutterActivity$1@91cdb2e
+D/CompatChangeReporter( 5389): Compat change id reported: 395521150; UID 10242; state: ENABLED
+I/ImeTracker( 5389): edu.mad4360.haunted_registry:659e49fb: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+W/RemoteInputConnectionImpl( 5389): requestCursorUpdates on inactive InputConnection
+W/RemoteInputConnectionImpl( 5389): getSurroundingText on inactive InputConnection
+I/ImeTracker( 5389): system_server:7ae7aeae: onCancelled at PHASE_CLIENT_ON_CONTROLS_CHANGED
+W/RemoteInputConnectionImpl( 5389): requestCursorUpdates on inactive InputConnection
+W/RemoteInputConnectionImpl( 5389): getSurroundingText on inactive InputConnection
+D/FlutterJNI( 5389): Sending viewport metrics to the engine.
+D/VRI[MainActivity]( 5389): WindowInsets changed: 2340x1080 statusBars:[0,66,0,0] mandatorySystemGestures:[0,66,0,88] 
+D/FlutterJNI( 5389): Sending viewport metrics to the engine.
+D/FlutterJNI( 5389): Sending viewport metrics to the engine.
+E/ConsumerBase( 5389): [ImageReader-1080x2340f1m3-5389-0] abandonLocked: ConsumerBase is abandoned!
+I/Surface ( 5389): Creating surface for consumer unnamed-5389-3 with slotExpansion=1 for 64 slots
+I/Surface ( 5389): Creating surface for consumer ImageReader-2340x1080f1m3-5389-1 with slotExpansion=1 for 64 slots
+E/BufferQueueProducer( 5389): [ImageReader-1080x2340f1m3-5389-0](id:150d00000002,api:1,p:5389,c:5389) cancelBuffer: BufferQueue has been abandoned
+I/aunted_registry( 5389): NativeAlloc concurrent mark compact GC freed 1123KB AllocSpace bytes, 8(1008KB) LOS objects, 49% free, 2884KB/5768KB, paused 1.987ms,6.363ms total 18.767ms
+D/VRI[MainActivity]( 5389): WindowInsets changed: 1080x2340 statusBars:[0,136,0,0] mandatorySystemGestures:[0,169,0,88] 
+D/FlutterJNI( 5389): Sending viewport metrics to the engine.
+D/FlutterJNI( 5389): Sending viewport metrics to the engine.
+E/ConsumerBase( 5389): [ImageReader-2340x1080f1m3-5389-1] abandonLocked: ConsumerBase is abandoned!
+I/Surface ( 5389): Creating surface for consumer unnamed-5389-4 with slotExpansion=1 for 64 slots
+I/Surface ( 5389): Creating surface for consumer ImageReader-1080x2340f1m3-5389-2 with slotExpansion=1 for 64 slots
+E/BufferQueueProducer( 5389): [ImageReader-2340x1080f1m3-5389-1](id:150d00000003,api:1,p:5389,c:5389) cancelBuffer: BufferQueue has been abandoned
+D/WindowOnBackDispatcher( 5389): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@826841f
+D/WindowOnBackDispatcher( 5389): setOnBackInvokedCallbackInfo: android.app.Activity$$ExternalSyntheticLambda0@826841f
+D/WindowOnBackDispatcher( 5389): setTopOnBackInvokedCallback (unwrapped): io.flutter.embedding.android.FlutterActivity$1@91cdb2e
+D/WindowOnBackDispatcher( 5389): setOnBackInvokedCallbackInfo: io.flutter.embedding.android.FlutterActivity$1@91cdb2e
+E/ConsumerBase( 5389): [ImageReader-1080x2340f1m3-5389-2] abandonLocked: ConsumerBase is abandoned!
+I/flutter ( 5389): 00:27 +1: (tearDownAll)
+I/flutter ( 5389): 00:27 +2: All tests passed!
+All tests passed.

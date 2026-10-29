@@ -5,7 +5,7 @@ Rohan: `ReddyR1105`. Het: `het1406`. Track: Undergraduate.
 ## Rohan's branch
 Branch: `rohan/form-and-integration`.
 Own `lib/screens/signup_page.dart` in Activity 10, `lib/screens/signup_screen.dart` in Activity 11, `lib/validators.dart`, and `lib/widgets/local_tips.dart`.
-Review each validator and the local-tip privacy boundary. Make a real improvement after running the app, such as improving keyboard focus traversal and testing it. Commit only the changes you made/reviewed. Suggested message: `Improve signup keyboard flow and validate form behavior`.
+Completed repository update: password Done submits Part 1 and opens the Part 2 date picker; tests verify both paths. Android build versions now match the installed JDK 25 toolchain. Unit/widget checks and an Android end-to-end test have passed. The update is recorded on Rohan’s branch and main.
 
 ## Het's branch
 Branch: `het/screens-and-evidence`.

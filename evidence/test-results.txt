@@ -1,9 +1,10 @@
 00:00 +0: loading C:/Users/gosan/Documents/Codex/2026-10-29/the/outputs/activity11/test/evidence_test.dart
 00:00 +0: C:/Users/gosan/Documents/Codex/2026-10-29/the/outputs/activity11/test/evidence_test.dart: capture real rendered app and exercise five picker boundaries
-00:00 +1: C:/Users/gosan/Documents/Codex/2026-10-29/the/outputs/activity11/test/evidence_test.dart: capture real rendered app and exercise five picker boundaries
-00:02 +2: C:/Users/gosan/Documents/Codex/2026-10-29/the/outputs/activity11/test/evidence_test.dart: capture real rendered app and exercise five picker boundaries
-00:04 +3: C:/Users/gosan/Documents/Codex/2026-10-29/the/outputs/activity11/test/evidence_test.dart: capture real rendered app and exercise five picker boundaries
-00:04 +4: C:/Users/gosan/Documents/Codex/2026-10-29/the/outputs/activity11/test/evidence_test.dart: capture real rendered app and exercise five picker boundaries
-00:06 +5: C:/Users/gosan/Documents/Codex/2026-10-29/the/outputs/activity11/test/widget_test.dart: picker boundaries and rotation preserve owned state
-00:07 +6: C:/Users/gosan/Documents/Codex/2026-10-29/the/outputs/activity11/test/widget_test.dart: replacement navigation returns to foyer and disposes the form
-00:08 +7: All tests passed!
+00:05 +1: C:/Users/gosan/Documents/Codex/2026-10-29/the/outputs/activity11/test/evidence_test.dart: capture real rendered app and exercise five picker boundaries
+00:05 +2: C:/Users/gosan/Documents/Codex/2026-10-29/the/outputs/activity11/test/evidence_test.dart: capture real rendered app and exercise five picker boundaries
+00:07 +3: C:/Users/gosan/Documents/Codex/2026-10-29/the/outputs/activity11/test/evidence_test.dart: capture real rendered app and exercise five picker boundaries
+00:07 +4: C:/Users/gosan/Documents/Codex/2026-10-29/the/outputs/activity11/test/evidence_test.dart: capture real rendered app and exercise five picker boundaries
+00:08 +5: C:/Users/gosan/Documents/Codex/2026-10-29/the/outputs/activity11/test/evidence_test.dart: capture real rendered app and exercise five picker boundaries
+00:09 +6: C:/Users/gosan/Documents/Codex/2026-10-29/the/outputs/activity11/test/evidence_test.dart: capture real rendered app and exercise five picker boundaries
+00:11 +7: C:/Users/gosan/Documents/Codex/2026-10-29/the/outputs/activity11/test/widget_test.dart: replacement navigation returns to foyer and disposes the form
+00:11 +8: All tests passed!

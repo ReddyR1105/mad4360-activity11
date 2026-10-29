@@ -1,0 +1,12 @@
+Performing Streamed Install
+Success
+
+Starting: Intent { cmp=edu.mad4360.haunted_registry/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: edu.mad4360.haunted_registry/.MainActivity
+TotalTime: 2320
+WaitTime: 2335
+Complete
+
+Process running after launch: 5749

@@ -1,0 +1,134 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:integration_test/integration_test.dart';
+import 'package:haunted_registry/main.dart' as app;
+
+void main() {
+  final binding = IntegrationTestWidgetsFlutterBinding.ensureInitialized();
+  testWidgets('Android complete registry flow and real orientation change', (
+    tester,
+  ) async {
+    app.main();
+    await tester.pumpAndSettle();
+    await binding.convertFlutterSurfaceToImage();
+    await tester.pumpAndSettle();
+    await binding.takeScreenshot('01-android-foyer');
+    await tester.tap(find.text('Enter If You Dare'));
+    await tester.pumpAndSettle();
+    await tester.ensureVisible(find.byKey(const Key('submit')));
+    await tester.tap(find.byKey(const Key('submit')));
+    await tester.pumpAndSettle();
+    expect(find.text('Enter your full name'), findsOneWidget);
+    expect(find.text('Choose a creature type'), findsOneWidget);
+    await tester.ensureVisible(find.byKey(const Key('name')));
+    await tester.enterText(find.byKey(const Key('name')), 'Rohan');
+    await tester.enterText(find.byKey(const Key('email')), 'demo@example.com');
+    await tester.enterText(find.byKey(const Key('password')), 'abc123');
+    FocusManager.instance.primaryFocus?.unfocus();
+    await tester.pumpAndSettle();
+    await tester.ensureVisible(find.byTooltip('Show password'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byTooltip('Show password'));
+    await tester.pumpAndSettle();
+    await tester.ensureVisible(find.byKey(const Key('birthday')));
+    await tester.tap(find.byKey(const Key('birthday')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('OK'));
+    await tester.pumpAndSettle();
+    await tester.ensureVisible(find.byKey(const Key('creature')));
+    for (final creature in [
+      'Bat',
+      'Black Cat',
+      'Pumpkin Spirit',
+      'Witch',
+      'Ghost',
+    ]) {
+      await tester.tap(find.byKey(const Key('creature')));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text(creature).last);
+      await tester.pumpAndSettle();
+      expect(find.text(creature), findsOneWidget);
+    }
+    expect(tester.state<FormState>(find.byType(Form)).validate(), isTrue);
+    await tester.pumpAndSettle();
+    await tester.ensureVisible(find.byKey(const Key('name')));
+    await tester.pumpAndSettle();
+    await binding.takeScreenshot('02-android-form');
+    await SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeLeft,
+    ]);
+    await tester.pumpAndSettle();
+    await Future<void>.delayed(const Duration(seconds: 2));
+    await tester.pumpAndSettle();
+    final size = tester.view.physicalSize;
+    expect(size.width, greaterThan(size.height));
+    expect(
+      tester
+          .widget<TextFormField>(find.byKey(const Key('name')))
+          .controller!
+          .text,
+      'Rohan',
+    );
+    expect(find.text('Ghost'), findsOneWidget);
+    expect(
+      tester
+          .widget<TextFormField>(find.byKey(const Key('birthday')))
+          .controller!
+          .text,
+      '1/1/2008',
+    );
+    expect(
+      tester
+          .widget<TextField>(
+            find.descendant(
+              of: find.byKey(const Key('password')),
+              matching: find.byType(TextField),
+            ),
+          )
+          .obscureText,
+      isFalse,
+    );
+    await binding.takeScreenshot('03-android-landscape');
+    await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+    await Future<void>.delayed(const Duration(seconds: 2));
+    await tester.pumpAndSettle();
+    await tester.ensureVisible(find.byKey(const Key('submit')));
+    await tester.tap(find.byKey(const Key('submit')));
+    await tester.pump();
+    expect(
+      tester.widget<FilledButton>(find.byKey(const Key('submit'))).onPressed,
+      isNull,
+    );
+    await tester.pump(const Duration(seconds: 3));
+    await tester.pump(const Duration(seconds: 1));
+    expect(find.text('Welcome, Rohan!'), findsOneWidget);
+    expect(find.text('Your Ghost companion is registered.'), findsOneWidget);
+    await binding.takeScreenshot('04-android-success');
+    await tester.pageBack();
+    await tester.pumpAndSettle();
+    expect(find.text('Enter If You Dare'), findsOneWidget);
+    await tester.tap(find.text('Enter If You Dare'));
+    await tester.pumpAndSettle();
+    expect(
+      tester
+          .widget<TextFormField>(find.byKey(const Key('name')))
+          .controller!
+          .text,
+      isEmpty,
+    );
+    await tester.ensureVisible(find.byType(Switch));
+    await tester.tap(find.byType(Switch));
+    await tester.pumpAndSettle();
+    await tester.ensureVisible(find.text('Get a signup tip'));
+    await tester.tap(find.text('Get a signup tip'));
+    await tester.pumpAndSettle();
+    expect(find.text('Retry'), findsOneWidget);
+    await tester.ensureVisible(find.text('Retry'));
+    await tester.tap(find.text('Retry'));
+    await tester.pumpAndSettle();
+    expect(find.text('Preset demo tip'), findsOneWidget);
+    await binding.takeScreenshot('05-android-tip-retry');
+    expect(tester.takeException(), isNull);
+  });
+}

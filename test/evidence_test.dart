@@ -25,10 +25,16 @@ void main() {
     tester,
   ) async {
     await tester.runAsync(() async {
-      final config = jsonDecode(File('.dart_tool/package_config.json').readAsStringSync()) as Map<String, dynamic>;
-      final package = (config['packages'] as List<dynamic>).cast<Map<String, dynamic>>().firstWhere((p) => p['name'] == 'flutter');
+      final config =
+          jsonDecode(File('.dart_tool/package_config.json').readAsStringSync())
+              as Map<String, dynamic>;
+      final package = (config['packages'] as List<dynamic>)
+          .cast<Map<String, dynamic>>()
+          .firstWhere((p) => p['name'] == 'flutter');
       final configUri = File('.dart_tool/package_config.json').absolute.uri;
-      final sdk = Directory.fromUri(configUri.resolve(package['rootUri'] as String)).parent.parent.path;
+      final sdk = Directory.fromUri(
+        configUri.resolve(package['rootUri'] as String),
+      ).parent.parent.path;
       final font = FontLoader('Roboto');
       font.addFont(
         Future.value(

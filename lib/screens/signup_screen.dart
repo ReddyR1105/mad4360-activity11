@@ -111,6 +111,11 @@ class _SignupScreenState extends State<SignupScreen> {
                     key: const Key('password'),
                     controller: _passwordController,
                     validator: validatePassword,
+                    textInputAction: TextInputAction.done,
+                    onFieldSubmitted: (_) {
+                      FocusScope.of(context).unfocus();
+                      _pickDate();
+                    },
                     obscureText: _obscurePassword,
                     enableSuggestions: false,
                     autocorrect: false,

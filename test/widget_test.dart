@@ -5,6 +5,23 @@ import 'package:haunted_registry/validators.dart';
 import 'package:haunted_registry/widgets/local_tips.dart';
 
 void main() {
+  testWidgets('password keyboard Done opens the birthday picker', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1080, 2400);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    await tester.pumpWidget(const HauntedMansionApp());
+    await tester.tap(find.text('Enter If You Dare'));
+    await tester.pumpAndSettle();
+    await tester.enterText(find.byKey(const Key('password')), 'abc123');
+    await tester.testTextInput.receiveAction(TextInputAction.done);
+    await tester.pumpAndSettle();
+    expect(find.byType(DatePickerDialog), findsOneWidget);
+    await tester.tap(find.text('Cancel'));
+    await tester.pumpAndSettle();
+  });
   test('original validators reject invalid inputs and accept valid inputs', () {
     expect(validateName('  '), isNotNull);
     expect(validateName('Rohan'), isNull);
