@@ -1,0 +1,6 @@
+Input | Expected | Observed
+1920-01-01 | Accept | Accepted
+2008-01-01 | Accept | Accepted
+2026-10-29 | Accept | Accepted
+2026-10-30 | Reject | Rejected with inline error
+1919-12-31 | Reject | Rejected with inline error
