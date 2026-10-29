@@ -57,4 +57,44 @@ void main() {
     await t.pumpWidget(const SizedBox());
     expect(t.takeException(), isNull);
   });
+  testWidgets(
+    'every creature remains selectable with keyboard-sized viewport',
+    (t) async {
+      t.view.physicalSize = const Size(320, 568);
+      t.view.devicePixelRatio = 1;
+      addTearDown(t.view.resetPhysicalSize);
+      addTearDown(t.view.resetDevicePixelRatio);
+      addTearDown(t.view.resetViewInsets);
+      await t.pumpWidget(const HauntedMansionApp());
+      await t.tap(find.text('Enter If You Dare'));
+      await t.pumpAndSettle();
+      await fill(t);
+      t.view.viewInsets = const FakeViewPadding(bottom: 260);
+      await t.pump();
+      await tapVisible(t, find.byKey(const Key('submit')));
+      await t.pump();
+      expect(t.takeException(), isNull);
+      t.view.viewInsets = const FakeViewPadding();
+      await t.pumpAndSettle();
+      for (final creature in [
+        'Ghost',
+        'Bat',
+        'Black Cat',
+        'Pumpkin Spirit',
+        'Witch',
+      ]) {
+        await tapVisible(t, find.byKey(const Key('creature')));
+        await t.pumpAndSettle();
+        await t.tap(find.text(creature).last);
+        await t.pumpAndSettle();
+        expect(
+          t
+              .state<FormFieldState<String>>(find.byKey(const Key('creature')))
+              .value,
+          creature,
+        );
+      }
+      expect(t.takeException(), isNull);
+    },
+  );
 }

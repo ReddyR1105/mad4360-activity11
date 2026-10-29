@@ -1,0 +1,8 @@
+class SuccessScreen {
+  const SuccessScreen({required this.userName, required this.creatureType});
+  final String userName;
+  final String creatureType;
+}
+void main() {
+  const SuccessScreen(userName: 'Demo Het');
+}
